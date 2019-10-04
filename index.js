@@ -4,7 +4,7 @@ var lineCounter = 0;  //Counts customer position in line
 function takeANumber(currentLine, name) {
   let status = "";   //message to be returned
   
-  if (currentLine.length <= 0) { //Only one person in line
+  if (currentLine.length === 0) { //Only one person in line
       currentLine.push(name);  //Person currently in line
       status += "Welcome, " + currentLine[lineCounter] + ". You are number " + (lineCounter + 1) + " in line."; 
       lineCounter++; 
@@ -19,7 +19,7 @@ function takeANumber(currentLine, name) {
 
 }//END takeANumber()
 
-
+//Tells you who is being served and moves on to next person
 function nowServing(currentLine) {
 	let status = "";		//Status of the line
 	if (currentLine.length === 0) { //Nobody's in line
@@ -34,7 +34,7 @@ function nowServing(currentLine) {
 }//END NowServing()
 
 
-
+//Tells you who is currently in line
 function currentLine(currentLine) {
 	let status = "";	//Status of the current line
 	let inLine = "";  //Whoever is in line
